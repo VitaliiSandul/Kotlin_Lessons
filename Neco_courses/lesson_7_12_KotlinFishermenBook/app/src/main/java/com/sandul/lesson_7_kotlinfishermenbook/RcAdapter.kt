@@ -23,7 +23,8 @@ class RcAdapter (listArray: ArrayList<ListItem>, context: Context): RecyclerView
 
         fun bind(listItem: ListItem, context: Context){
             tvTitle.text = listItem.titleText
-            tvContext.text = listItem.contentText.substring(0,50)+" ..."
+            var textCon = listItem.contentText.substring(0,50)+" ..."
+            tvContext.text = textCon
             ivFish.setImageResource(listItem.image_id)
 
             itemView.setOnClickListener(){
