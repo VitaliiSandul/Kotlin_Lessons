@@ -28,11 +28,15 @@ class RcAdapter (listArray: ArrayList<ListItem>, context: Context): RecyclerView
             ivFish.setImageResource(listItem.image_id)
 
             itemView.setOnClickListener(){
-                Toast.makeText(context, "Pressed: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
+
+                Toast.makeText(context, "Pressed: ${tvTitle.text} ID: ${this.position}", Toast.LENGTH_SHORT).show()
+
+                var index = this.position
                 val i = Intent(context, ContentActivity::class.java).apply {
                     putExtra("title",listItem.titleText)
                     putExtra("content",listItem.contentText)
                     putExtra("image",listItem.image_id)
+                    putExtra("index", index)
                 }
                 context.startActivity(i)
             }
