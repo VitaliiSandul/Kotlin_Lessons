@@ -71,9 +71,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "Id close app",Toast.LENGTH_SHORT).show()
                 finish()
                 System.exit(0)
-                //commit 1
-                //commit 2
-                //commit 3
             }
         }
 
