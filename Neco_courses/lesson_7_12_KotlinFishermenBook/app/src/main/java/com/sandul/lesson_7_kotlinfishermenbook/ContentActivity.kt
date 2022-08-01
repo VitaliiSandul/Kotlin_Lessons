@@ -9,19 +9,10 @@ class ContentActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.content_layout)
-
-//        tvTitle.text = intent.getStringExtra("title")
-//        tvContent.text = intent.getStringExtra("content")
-//        im.setImageResource(intent.getIntExtra("image",R.drawable.ic_fish))
-
         setContentView(R.layout.content_2_layout)
 
         var index = intent.getIntExtra("index",0)
         webView.clearCache(true)
         webView.loadUrl("file:///android_asset/item_0.html")
-
-
-
     }
 }
