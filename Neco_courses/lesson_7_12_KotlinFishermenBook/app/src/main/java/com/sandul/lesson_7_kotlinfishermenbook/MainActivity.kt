@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "Id close app",Toast.LENGTH_SHORT).show()
                 finish()
                 System.exit(0)
+                //comment 7 from branch A
             }
         }
 
