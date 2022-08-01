@@ -6,5 +6,9 @@
     <string name="history">Истории</string>
     <string name="contacts">Контакты</string>
     <string name="delivery">Доставка</string>
+<<<<<<< HEAD
     <string name="close_app">Закрить апку</string>
+=======
+    <string name="close_app">Закрить приложение</string>
+>>>>>>> eb67491 (Added button CLOSE APP)
 </resources>
