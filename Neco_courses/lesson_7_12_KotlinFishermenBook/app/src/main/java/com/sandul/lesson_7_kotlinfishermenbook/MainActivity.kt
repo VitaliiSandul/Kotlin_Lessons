@@ -22,11 +22,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
         var list = ArrayList<ListItem>()
-//        list.add(ListItem(R.drawable.som, "Сом", "Рыба сом Рыба сом Рыба сом Рыба сом Рыба сом"))
-//        list.add(ListItem(R.drawable.nalim, "Налим", "Рыба налим Рыба налим Рыба налим Рыба налим Рыба налим"))
-//        list.add(ListItem(R.drawable.shuca, "Щука", "Рыба щука Рыба щука Рыба щука Рыба щука Рыба щука"))
-//        list.add(ListItem(R.drawable.caras, "Карась", "Рыба карась Рыба карась Рыба карась Рыба карась Рыба карась"))
-
         list.addAll(fillArrays(resources.getStringArray(R.array.fish),
                                 resources.getStringArray(R.array.fish_content),
                                 getImageId(R.array.fish_image_array)
