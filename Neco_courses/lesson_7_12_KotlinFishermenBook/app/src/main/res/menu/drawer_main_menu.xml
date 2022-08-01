@@ -25,6 +25,10 @@
             <item android:title="@string/delivery"
                 android:id="@+id/id_delivery"
                 android:icon="@drawable/ic_delivery"/>
+            <item
+                android:id="@+id/id_close_app"
+                android:icon="@drawable/ic_delivery"
+                android:title="@string/close_app" />
         </menu>
     </item>
 
