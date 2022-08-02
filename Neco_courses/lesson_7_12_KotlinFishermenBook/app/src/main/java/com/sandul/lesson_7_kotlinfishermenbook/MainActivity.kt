@@ -71,6 +71,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 //comment 8 from branch B
             }
+            R.id.id_test_button ->{
+                Toast.makeText(this, "Id test button",Toast.LENGTH_SHORT).show()
+            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
