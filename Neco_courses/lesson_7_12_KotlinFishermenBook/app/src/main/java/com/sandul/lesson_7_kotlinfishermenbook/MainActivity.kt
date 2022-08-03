@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 System.exit(0)
                 //comment 7 from branch A
             }
+            //comment 8 from branch A
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
