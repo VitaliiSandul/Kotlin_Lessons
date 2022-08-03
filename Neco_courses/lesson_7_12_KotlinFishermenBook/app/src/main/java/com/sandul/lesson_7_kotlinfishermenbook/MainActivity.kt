@@ -76,7 +76,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             //comment 8 from branch A
             //comment 9 from branch A
 
-            //feature_A commit 1
             //feature_A commit 2
             //feature_A commit 3
         }
