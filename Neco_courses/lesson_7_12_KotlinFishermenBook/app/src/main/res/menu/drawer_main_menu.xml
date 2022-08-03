@@ -27,7 +27,11 @@
                 android:icon="@drawable/ic_delivery"/>
             <item
                 android:id="@+id/id_close_app"
+<<<<<<< HEAD
                 android:icon="@drawable/ic_delivery"
+=======
+                android:icon="@android:drawable/ic_notification_clear_all"
+>>>>>>> eb67491 (Added button CLOSE APP)
                 android:title="@string/close_app" />
         </menu>
     </item>
