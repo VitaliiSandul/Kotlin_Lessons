@@ -69,6 +69,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.id_close_app -> {
                 Toast.makeText(this, "Id close app",Toast.LENGTH_SHORT).show()
             }
+
+            //comment #1 feature_D
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
