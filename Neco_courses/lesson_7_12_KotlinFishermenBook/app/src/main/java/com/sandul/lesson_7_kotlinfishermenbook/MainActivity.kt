@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             //comment #2 feature_D
 
             //comment #1 feature_H
+            //comment #2 feature_H
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
