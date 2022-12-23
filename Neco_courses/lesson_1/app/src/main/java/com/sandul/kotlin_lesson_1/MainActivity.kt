@@ -10,6 +10,7 @@ import java.sql.Array
 
 class MainActivity : AppCompatActivity() {
 
+    val TAG = "ActivityLifeCycle"
     private var number: Int = 5
     private var number2: Int = 5
     private var text: String = "in the <store1> store there are $number <store2>"
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("onCreate","onCreate")
+        Log.d(TAG, "onCreate")
 
         tvText = findViewById(R.id.tvText)
         tvText2 = findViewById(R.id.tvText2)
@@ -46,9 +47,9 @@ class MainActivity : AppCompatActivity() {
 
 //        var startNumber = IntArray(3)
 
-        for(n in 0 until text.length){
+        for (n in 0 until text.length) {
 
-            if(text.get(n) == '>'){
+            if (text.get(n) == '>') {
                 counter++
             }
         }
@@ -58,21 +59,21 @@ class MainActivity : AppCompatActivity() {
         var startPcounter: Int = 0
         var endPcounter: Int = 0
 
-        for(n in text.indices){
-            if(text.get(n) == '<'){
-                startPosition[startPcounter] = n+1
+        for (n in text.indices) {
+            if (text.get(n) == '<') {
+                startPosition[startPcounter] = n + 1
                 startPcounter++
             }
 
-            if(text.get(n) == '>'){
+            if (text.get(n) == '>') {
                 endPosition[endPcounter] = n
                 endPcounter++
             }
         }
 
-        var textFoundArray = Array(counter){""}
+        var textFoundArray = Array(counter) { "" }
 
-        for (n in 0 until startPosition.size ){
+        for (n in 0 until startPosition.size) {
             textFoundArray[n] = text.substring(startPosition[n], endPosition[n])
             Log.d("MyLog", "Text from $n: " + textFoundArray[n])
         }
@@ -80,37 +81,37 @@ class MainActivity : AppCompatActivity() {
         tvText?.setText(counter.toString())
     }
 
-    private fun getNumber(): Int{
+    private fun getNumber(): Int {
         return number + number2
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d("onStart","onStart")
+        Log.d(TAG, "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("onResume","onResume")
+        Log.d(TAG, "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("onPause","onPause")
+        Log.d(TAG, "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("onStop","onStop")
+        Log.d(TAG, "onStop")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d("onRestart","onRestart")
+        Log.d(TAG, "onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("onDestroy","onDestroy")
+        Log.d(TAG, "onDestroy")
     }
 }
