@@ -6,48 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonPlus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Plus"
-        app:layout_constraintEnd_toEndOf="@+id/tvResult"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="@+id/tvResult"
-        app:layout_constraintTop_toBottomOf="@+id/tvResult" />
-
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/tvRes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="324 and 34"
-        android:textSize="34sp"
+        android:text="Enter your name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintVertical_bias="0.22000003" />
+
+    <EditText
+        android:id="@+id/edValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="your name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/tvRes"
+        app:layout_constraintStart_toStartOf="@+id/tvRes"
+        app:layout_constraintTop_toBottomOf="@+id/tvRes" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/teal_200"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edPassword"
+        app:layout_constraintStart_toStartOf="@+id/edPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edPassword" />
 
     <Button
-        android:id="@+id/buttonMinus"
+        android:id="@+id/btnResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Minus"
-        app:layout_constraintEnd_toEndOf="@+id/buttonPlus"
-        app:layout_constraintStart_toStartOf="@+id/buttonPlus"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
+        android:layout_marginTop="16dp"
+        android:text="Check your salary"
+        app:layout_constraintEnd_toEndOf="@+id/edValue"
+        app:layout_constraintStart_toStartOf="@+id/edValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult" />
 
-    <Button
-        android:id="@+id/buttonMultiply"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Multiply"
-        app:layout_constraintEnd_toEndOf="@+id/buttonMinus"
-        app:layout_constraintStart_toStartOf="@+id/buttonMinus"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edValue"
+        app:layout_constraintStart_toStartOf="@+id/edValue"
+        app:layout_constraintTop_toBottomOf="@+id/edValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
