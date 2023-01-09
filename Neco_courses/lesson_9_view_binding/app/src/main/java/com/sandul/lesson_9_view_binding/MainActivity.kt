@@ -18,33 +18,44 @@ class MainActivity : AppCompatActivity() {
         binding.btnResult.setOnClickListener {
             val editText = binding.edValue.text.toString()
             val editPass = binding.edPassword.text.toString().toInt()
-            var tmp = ""
+            var tmp = "Wrong name or password"
 
             when (editText) {
                 Constants.DIRECTOR -> {
                     if (editPass == Constants.DIRECTOR_PASSWORD) {
                         tmp = "${Constants.DIRECTOR}, your salary is ${Constants.DIRECTOR_SALARY} USD/month"
-                        binding.tvResult.text = tmp
+                        binding.image.setImageResource(R.drawable.serg)
+                    } else {
+                        binding.image.setImageResource(R.drawable.figsign)
                     }
+                    binding.tvResult.text = tmp
                 }
                 Constants.IOS_ENGINEER -> {
                     if (editPass == Constants.IOS_ENGINEER_PASSWORD) {
                         tmp = "${Constants.IOS_ENGINEER}, your salary is ${Constants.IOS_ENGINEER_SALARY} USD/month"
-                        binding.tvResult.text = tmp
+                        binding.image.setImageResource(R.drawable.alex)
+                    } else {
+                        binding.image.setImageResource(R.drawable.figsign)
                     }
+                    binding.tvResult.text = tmp
                 }
                 Constants.ANDROID_ENGINEER -> {
                     if (editPass == Constants.ANDROID_ENGINEER_PASSWORD) {
                         tmp = "${Constants.ANDROID_ENGINEER}, your salary is ${Constants.ANDROID_ENGINEER_SALARY} USD/month"
-                        binding.tvResult.text = tmp
+                        binding.image.setImageResource(R.drawable.vitalii)
+                    } else {
+                        binding.image.setImageResource(R.drawable.figsign)
                     }
+                    binding.tvResult.text = tmp
                 }
                 else -> {
                     tmp = "Wrong name or password"
                     binding.tvResult.text = tmp
+                    binding.image.setImageResource(R.drawable.figsign)
                 }
             }
             binding.tvResult.visibility = View.VISIBLE
+            binding.image.visibility = View.VISIBLE
         }
     }
 }

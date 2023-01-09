@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">lesson_9_view_binding</string>
+    <string name="ok" translatable="false">OK</string>
 </resources>
