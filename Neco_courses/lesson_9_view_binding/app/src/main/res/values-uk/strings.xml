@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Мій додаток</string>
+    <string name="hello">Привіт</string>
 </resources>
