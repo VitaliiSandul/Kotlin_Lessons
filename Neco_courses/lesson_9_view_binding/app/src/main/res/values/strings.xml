@@ -2,4 +2,6 @@
     <string name="app_name">App Binding</string>
     <string name="ok" translatable="false">OK</string>
     <string name="hello">Hello</string>
+    <string name="alex">Alex</string>
+    <string name="serg">Serg</string>
 </resources>

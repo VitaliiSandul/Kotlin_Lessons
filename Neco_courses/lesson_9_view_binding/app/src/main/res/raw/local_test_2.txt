@@ -1,0 +1,6 @@
+{ "features":
+	{
+			"nm_enabled_inc": true,
+			"remote_logging_level": 65535
+	}
+}

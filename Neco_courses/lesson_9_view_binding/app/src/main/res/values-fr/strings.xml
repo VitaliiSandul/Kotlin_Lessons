@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">app fr</string>
     <string name="hello">Bonsior</string>
+    <string name="alex">Alex</string>
+    <string name="serg">Sergey</string>
 </resources>
