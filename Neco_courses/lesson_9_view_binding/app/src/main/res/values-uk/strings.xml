@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">Мій додаток</string>
-    <string name="hello">Привіт</string>
-    <string name="alex">Алекс</string>
-    <string name="serg">Сергій</string>
 </resources>
