@@ -8,6 +8,7 @@ import com.sandul.lesson_9_view_binding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    val REQUEST_CODE = 100
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,12 +18,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onClickGoTest2(view: View) {
-        val intent = Intent(this, TestActivity2::class.java)
-        startActivity(intent)
+    fun onClickGoTest1(view: View) {
+        val intent = Intent(this, TestActivity1::class.java)
+        intent.putExtra("key", "what is your name?")
+        startActivityForResult(intent, REQUEST_CODE)
     }
 
-    fun onClickClose(view: View) {
-        finish()
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data != null) {
+            binding.tvName.text = data.getStringExtra("key2")
+        }
     }
 }

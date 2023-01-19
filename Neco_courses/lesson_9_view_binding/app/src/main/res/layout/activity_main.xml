@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MainActivity"
@@ -21,22 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:onClick="onClickGoTest2"
-        android:text="TestActivity2"
+        android:onClick="onClickGoTest1"
+        android:text="TestActivity1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="onClickClose"
-        android:text="Close"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
