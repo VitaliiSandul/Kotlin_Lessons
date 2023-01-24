@@ -1,15 +1,16 @@
 package com.sandul.lesson_9_view_binding.constants
 
 object Constants {
-    const val DIRECTOR_SALARY = 50000
-    const val IOS_ENGINEER_SALARY = 20000
-    const val ANDROID_ENGINEER_SALARY = 20000
+    const val SIGN_IN_STATE = "sign_in"
+    const val SIGN_UP_STATE = "sign_up"
+    const val SIGN_STATE = "sign_state"
+    const val REQUEST_CODE_SIGN_IN = 1212
+    const val REQUEST_CODE_SIGN_UP = 2121
 
-    const val DIRECTOR = "Sergiy"
-    const val IOS_ENGINEER = "Alex"
-    const val ANDROID_ENGINEER = "Vitalii"
-
-    const val DIRECTOR_PASSWORD = 1234
-    const val IOS_ENGINEER_PASSWORD = 5678
-    const val ANDROID_ENGINEER_PASSWORD = 9012
+    const val LOGIN = "login"
+    const val PASSWORD = "password"
+    const val NAME = "name"
+    const val MIDDLENAME = "middlename"
+    const val LASTNAME = "lastname"
+    const val AVATAR_ID = "avatar_id"
 }
