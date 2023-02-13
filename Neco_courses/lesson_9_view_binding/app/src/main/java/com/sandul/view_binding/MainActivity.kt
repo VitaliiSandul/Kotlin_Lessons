@@ -1,12 +1,12 @@
-package com.sandul.lesson_9_view_binding
+package com.sandul.view_binding
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.sandul.lesson_9_view_binding.constants.Constants
-import com.sandul.lesson_9_view_binding.databinding.ActivityMainBinding
+import com.sandul.view_binding.constants.Constants
+import com.sandul.view_binding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 binding.tvInfo.text = textInfo
                 binding.btnHide.visibility = View.GONE
                 binding.btnExit.text = "Exit"
-            } else{
+            } else {
                 binding.imAvatar.visibility = View.VISIBLE
                 binding.imAvatar.setImageResource(R.drawable.figsign)
                 binding.tvInfo.text = getString(R.string.account_does_not_exists)
@@ -58,12 +57,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickSignIn(view: View) {
-        if (binding.imAvatar.isVisible && binding.tvInfo.text.toString() != getString(R.string.account_does_not_exists)){
+        if (binding.imAvatar.isVisible && binding.tvInfo.text.toString() != getString(R.string.account_does_not_exists)) {
             binding.imAvatar.visibility = View.INVISIBLE
             binding.btnExit.text = ""
             binding.btnHide.visibility = View.VISIBLE
             binding.btnExit.text = getString(R.string.sign_in)
-        } else{
+        } else {
             val intent = Intent(this, SignInUpActivity::class.java)
             intent.putExtra(Constants.SIGN_STATE, Constants.SIGN_IN_STATE)
             startActivityForResult(intent, Constants.REQUEST_CODE_SIGN_IN)
@@ -76,6 +75,4 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(Constants.SIGN_STATE, Constants.SIGN_UP_STATE)
         startActivityForResult(intent, Constants.REQUEST_CODE_SIGN_UP)
     }
-
-
 }

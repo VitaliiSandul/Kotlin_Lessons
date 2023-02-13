@@ -1,4 +1,4 @@
-package com.sandul.lesson_9_view_binding.constants
+package com.sandul.view_binding.constants
 
 object Constants {
     const val SIGN_IN_STATE = "sign_in"

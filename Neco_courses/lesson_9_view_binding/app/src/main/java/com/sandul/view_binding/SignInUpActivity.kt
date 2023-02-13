@@ -1,12 +1,12 @@
-package com.sandul.lesson_9_view_binding
+package com.sandul.view_binding
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
-import com.sandul.lesson_9_view_binding.constants.Constants
-import com.sandul.lesson_9_view_binding.databinding.ActivitySignUpInBinding
+import com.sandul.view_binding.constants.Constants
+import com.sandul.view_binding.databinding.ActivitySignUpInBinding
 
 class SignInUpActivity : AppCompatActivity() {
 

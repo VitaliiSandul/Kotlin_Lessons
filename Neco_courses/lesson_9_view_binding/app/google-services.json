@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "994398108306",
+    "project_id": "view-binding-f5d32",
+    "storage_bucket": "view-binding-f5d32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994398108306:android:38287c4b3969593235044b",
+        "android_client_info": {
+          "package_name": "com.sandul.lesson_9_view_binding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994398108306-pme08o7nev3oql56oq31hrser7s1bh4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXV_6I1N8369Z6hyllzkVCeQVO8SvLgSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994398108306-pme08o7nev3oql56oq31hrser7s1bh4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

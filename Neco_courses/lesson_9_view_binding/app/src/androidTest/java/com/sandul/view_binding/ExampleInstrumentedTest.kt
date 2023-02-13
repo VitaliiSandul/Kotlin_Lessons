@@ -1,4 +1,4 @@
-package com.sandul.lesson_9_view_binding
+package com.sandul.view_binding
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
