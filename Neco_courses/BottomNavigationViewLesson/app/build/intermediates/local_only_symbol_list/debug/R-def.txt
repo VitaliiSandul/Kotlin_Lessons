@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color red
+color teal_200
+color teal_700
+color unchecked
+color white
+drawable bottom_nav_selector
+drawable ic_item1
+drawable ic_item2
+drawable ic_item3
+drawable ic_item4
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id bNav
+id item1
+id item2
+id item3
+id item4
+layout activity_main
+menu bottom_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.BottomNavigationViewLesson
+xml backup_rules
+xml data_extraction_rules
