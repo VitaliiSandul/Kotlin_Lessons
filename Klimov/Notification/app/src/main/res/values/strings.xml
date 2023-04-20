@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Notification</string>
+    <string name="reminder">Reminder</string>
+    <string name="feed_cat">It\'s time to feed the cat</string>
+    <string name="channel_name">Chanel Name</string>
+    <string name="channel_description">Channel Description</string>
+</resources>

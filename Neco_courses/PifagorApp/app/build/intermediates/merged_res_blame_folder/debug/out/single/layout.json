@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/vitalii.sandul/.gradle/daemon/7.4/com.sandul.pifagorapp-mergeDebugResources-28:/layout/test_layout.xml",
+        "source": "/Users/vitalii.sandul/.gradle/daemon/7.4/com.sandul.pifagorapp-main-31:/layout/test_layout.xml"
+    },
+    {
+        "merged": "/Users/vitalii.sandul/.gradle/daemon/7.4/com.sandul.pifagorapp-mergeDebugResources-28:/layout/activity_main.xml",
+        "source": "/Users/vitalii.sandul/.gradle/daemon/7.4/com.sandul.pifagorapp-main-31:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.sandul.pifagorapp-mergeDebugResources-28:/layout/test_layout.xml",
+        "source": "com.sandul.pifagorapp-main-31:/layout/test_layout.xml"
+    }
+]
