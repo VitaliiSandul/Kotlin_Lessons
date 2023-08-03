@@ -56,11 +56,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun circleItem() {
-    var counter = remember {
+    val counter = remember {
         mutableStateOf(0)
     }
 
-    var color = remember {
+    val color = remember {
         mutableStateOf(Color.Blue)
     }
 
@@ -69,9 +69,10 @@ private fun circleItem() {
             .size(100.dp)
             .background(color = color.value, shape = CircleShape)
             .clickable {
-                when (++counter.value) {
-                    10 -> color.value = Color.Red
-                    20 -> color.value = Color.Green
+                color.value = when (++counter.value) {
+                    in(10..19) -> Color.Red
+                    in (20..29) -> Color.Green
+                    else -> Color.Blue
                 }
             },
         contentAlignment = Alignment.Center
