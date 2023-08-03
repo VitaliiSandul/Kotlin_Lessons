@@ -13,6 +13,7 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -20,10 +21,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -37,23 +41,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                listItem("Will Smith - 1", "actor")
-                listItem("Will Smith - 2", "actor")
-                listItem("Will Smith - 3", "actor")
-                listItem("Will Smith - 4", "actor")
-                listItem("Will Smith - 1", "actor")
-                listItem("Will Smith - 2", "actor")
-                listItem("Will Smith - 3", "actor")
-                listItem("Will Smith - 4", "actor")
-                listItem("Will Smith - 1", "actor")
-                listItem("Will Smith - 2", "actor")
-                listItem("Will Smith - 3", "actor")
-                listItem("Will Smith - 4", "actor")
-                listItem("Will Smith - 1", "actor")
-                listItem("Will Smith - 2", "actor")
-                listItem("Will Smith - 3", "actor")
-                listItem("Will Smith - 4", "actor")
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                circleItem()
             }
 
         }
@@ -61,52 +53,31 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun listItem(name: String, prof: String) {
-    Card(
+private fun circleItem() {
+    var counter = remember {
+        mutableStateOf(0)
+    }
+
+    var color = remember {
+        mutableStateOf(Color.Blue)
+    }
+
+    Box(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(10.dp)
-//            .clickable {
-//                Log.d("MyLog", "Clicked")
-//            },
-            .pointerInput(Unit) {
-//                detectDragGesturesAfterLongPress { change, dragAmount ->
-//                    Log.d("MyLog", "Long press dragAmount: ${dragAmount}")
-//                    Log.d("MyLog", "Long press change.position: ${change.position}")
-//                }
-
-//                detectTapGestures {
-//                    Log.d("MyLog", "TapGestures: ${it}")
-//                }
-
-                detectHorizontalDragGestures { change, dragAmount ->
-                    Log.d("MyLog", "HorizontalDragGestures dragAmount: ${dragAmount}")
+            .size(100.dp)
+            .background(color = color.value, shape = CircleShape)
+            .clickable {
+                counter.value++
+                if(counter.value > 10){
+                    color.value = Color.Red
                 }
             },
-        shape = RoundedCornerShape(15.dp),
-        elevation = CardDefaults.cardElevation(5.dp)
-
+        contentAlignment = Alignment.Center
     ) {
-        Box() {
-            Row(
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.will_smith),
-                    contentDescription = "image",
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .padding(5.dp)
-                        .size(64.dp)
-                        .clip(CircleShape)
-                )
-                Column(modifier = Modifier.padding(start = 10.dp)) {
-                    Text(text = name)
-                    Text(text = prof)
-                }
-
-            }
-        }
+        Text(
+            text = counter.value.toString(),
+        )
     }
+
 }
 
