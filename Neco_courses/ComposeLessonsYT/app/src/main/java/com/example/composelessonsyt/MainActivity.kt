@@ -35,7 +35,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,15 +69,16 @@ private fun circleItem() {
             .size(100.dp)
             .background(color = color.value, shape = CircleShape)
             .clickable {
-                counter.value++
-                if(counter.value > 10){
-                    color.value = Color.Red
+                when (++counter.value) {
+                    10 -> color.value = Color.Red
+                    20 -> color.value = Color.Green
                 }
             },
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = counter.value.toString(),
+            style = TextStyle(color = Color.White, fontSize = 20.sp)
         )
     }
 
