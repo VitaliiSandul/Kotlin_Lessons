@@ -17,6 +17,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -43,45 +46,73 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                circleItem()
-            }
+//            Column(
+//                horizontalAlignment = Alignment.CenterHorizontally,
+//                modifier = Modifier
+//                    .fillMaxSize()
+//                    .verticalScroll(rememberScrollState())
+//            ){
+//                for (i in 0..100){
+//                    Text(
+//                        text = "Item # $i",
+//                        fontSize = 30.sp,
+//                        modifier = Modifier.padding(vertical = 10.dp)
+//                    )
+//                }
+//            }
 
+            //works like recyclerview good for memory
+//            LazyColumn(
+//                horizontalAlignment = Alignment.CenterHorizontally,
+//                modifier = Modifier
+//                    .fillMaxSize()
+//            ){
+//                items(count = 100) {
+//                    Text(
+//                        text = "Item # $it",
+//                        fontSize = 30.sp,
+//                        modifier = Modifier.padding(vertical = 10.dp)
+//                    )
+//                }
+//
+//
+//            }
+
+//            LazyColumn(
+//                horizontalAlignment = Alignment.CenterHorizontally,
+//                modifier = Modifier
+//                    .fillMaxSize()
+//            ){
+//                itemsIndexed(
+//                    listOf("item 1", "item 2", "End", "item 4", "Finish", "item 6", "item 7")
+//                ) { index, item ->
+//                    Text(
+//                        text = "Index -> $index; Item value -> $item",
+//                        fontSize = 30.sp,
+//                        modifier = Modifier.padding(vertical = 10.dp)
+//                    )
+//                }
+//
+//
+//            }
+
+            LazyRow(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxSize()
+            ){
+                itemsIndexed(
+                    listOf("item 1", "item 2", "End", "item 4", "Finish", "item 6", "item 7")
+                ) { index, item ->
+                    Text(
+                        text = "Index -> $index; Item value -> $item",
+                        fontSize = 30.sp,
+                        modifier = Modifier.padding(horizontal = 10.dp)
+                    )
+                }
+
+
+            }
         }
     }
 }
-
-@Composable
-private fun circleItem() {
-    val counter = remember {
-        mutableStateOf(0)
-    }
-
-    val color = remember {
-        mutableStateOf(Color.Blue)
-    }
-
-    Box(
-        modifier = Modifier
-            .size(100.dp)
-            .background(color = color.value, shape = CircleShape)
-            .clickable {
-                color.value = when (++counter.value) {
-                    in(10..19) -> Color.Red
-                    in (20..29) -> Color.Green
-                    else -> Color.Blue
-                }
-            },
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = counter.value.toString(),
-            style = TextStyle(color = Color.White, fontSize = 20.sp)
-        )
-    }
-
-}
-
