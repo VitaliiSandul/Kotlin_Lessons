@@ -47,23 +47,34 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LazyRow(
+            LazyColumn(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Gray100)
-            ){
+            ) {
                 itemsIndexed(
                     listOf(
-                        ItemRowModel(R.drawable.image_1, "Tesla"),
-                        ItemRowModel(R.drawable.image_2, "Zelenski"),
-                        ItemRowModel(R.drawable.image_3, "Einstein"),
-                        ItemRowModel(R.drawable.image_4, "Mandela"),
-                        ItemRowModel(R.drawable.image_5, "Monroe"),
-                        ItemRowModel(R.drawable.image_1, "Tesla"),
-                        ItemRowModel(R.drawable.image_2, "Zelenski"),
-                        ItemRowModel(R.drawable.image_3, "Einstein"),
-                        ItemRowModel(R.drawable.image_4, "Mandela"),
-                        ItemRowModel(R.drawable.image_5, "Monroe")
+                        ItemRowModel(R.drawable.image_1, "Tesla", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. " +
+                                                                                "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
+                                                                                "when an unknown printer took a galley of type and scrambled it to make a type " +
+                                                                                "specimen book. It has survived not only five centuries, but also the leap into " +
+                                                                                "electronic typesetting, remaining essentially unchanged. It was popularised in " +
+                                                                                "the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, " +
+                                                                                "and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."),
+                        ItemRowModel(R.drawable.image_2, "Zelenski", "test"),
+                        ItemRowModel(R.drawable.image_3, "Einstein", "test"),
+                        ItemRowModel(R.drawable.image_4, "Mandela", "test"),
+                        ItemRowModel(R.drawable.image_5, "Monroe", "test"),
+                        ItemRowModel(R.drawable.image_1, "Tesla", "test"),
+                        ItemRowModel(R.drawable.image_2, "Zelenski", "test"),
+                        ItemRowModel(R.drawable.image_3, "Einstein", "test"),
+                        ItemRowModel(R.drawable.image_4, "Mandela", "test"),
+                        ItemRowModel(R.drawable.image_5, "Monroe", "test"),
+                        ItemRowModel(R.drawable.image_1, "Tesla", "test"),
+                        ItemRowModel(R.drawable.image_2, "Zelenski", "test"),
+                        ItemRowModel(R.drawable.image_3, "Einstein", "test"),
+                        ItemRowModel(R.drawable.image_4, "Mandela", "test"),
+                        ItemRowModel(R.drawable.image_5, "Monroe", "test")
                     )
                 ) { _, item ->
                     ItemRow(item = item)
